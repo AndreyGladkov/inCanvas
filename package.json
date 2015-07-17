@@ -1,0 +1,13 @@
+{
+  "name": "gulp-progect",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "^2.5.3",
+    "gulp": "^3.8.11",
+    "gulp-closure-compiler": "^0.2.18",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rev-append": "^0.1.6"
+  }
+}
