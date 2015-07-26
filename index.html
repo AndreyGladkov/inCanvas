@@ -3,54 +3,25 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>inCanvas</title>
-    <link rel="stylesheet" href="css/style.min.css?rev=f859a5a1907beda3fea30747afb8f4b5"/>
+    <link rel="stylesheet" href="styles/inCanvas.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+    </script>
 </head>
 <body>
-<div class="photo-editor-nav">
-    <button id="js-new-img">Новое изображение</button>
-    <button id="js-tools-pencil">Карандаш</button>
-    <button id="js-tools-brush">Кисть</button>
-    <button id="js-tools-cancel">Другой инструмент</button>
-    <button id="js-tools-save-img">Сохранить</button>
-    <input type="color" id="js-tools-color" value="#000000" name="color">
-    <input type="file" id="js-open-img"/>
-    <a href="" class="" id="js-link-save-image">
-        Скачать изображение
-        <img id="canvasImg" alt="фоторедактор онлайн" title="фоторедактор онлайн">
-    </a>
-
-</div>
-<div class="photo-editor-wrapper" >
-    <canvas  class="photo-editor-workplace" id="js-photo-editor-workplace"></canvas>
-    <div class="clear"></div>
-</div>
-<ul class="filter-list">
-    <li class="filter-list_item" id="js-img-reset">
-        Нормальное
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-        <div class="background-filter"></div>
-    </li>
-    <li class="filter-list_item" id="js-filter-white-black">
-        Серый
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-    </li>
-    <li class="filter-list_item" id="js-filter-red">
-        Красный
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-    </li>
-    <li class="filter-list_item" id="js-filter-blur">
-        Красный
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-    </li>
-    <li class="filter-list_item" id="js-filter-sepia">
-        Септия
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-    </li>
-    <li class="filter-list_item" id="js-filter-test">
-        Тест
-        <div class="filter-multiply-wrapper"><div class="filter-multiply js-filter-control"></div></div>
-    </li>
-</ul>
-<script src="js/photo.js"></script>
+<section class="section-image" id="base-canvas"></section>
+<section class="section-image" id="edit-canvas"></section>
+<div id="mocha"></div>
+<script src="lib/inCanvas.js"></script>
+<script src="test/bddTests.js"></script>
+<script>
+    mocha.run();
+</script>
 </body>
 </html>

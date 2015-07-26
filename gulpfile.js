@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 //connect
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy: "localhost/photonline"
+		proxy: "/web-develop/inCanvas",
 	});
 });
 
@@ -27,7 +27,7 @@ gulp.task('less', function () {
 
 // append JavaScript files
 gulp.task('appendJs', function() {
-	return gulp.src('js/*.js')
+	return gulp.src('lib/*.js')
 		.pipe(gulp.dest('app/js/'));
 });
 
