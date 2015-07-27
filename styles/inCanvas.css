@@ -1,0 +1,8 @@
+.section-image {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.section-image canvas {
+  width: 100%;
+}
