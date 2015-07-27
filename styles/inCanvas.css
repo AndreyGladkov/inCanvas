@@ -6,7 +6,7 @@
 .section-list:after {
   display: block;
   clear: both;
-  contet: '';
+  content: '';
 }
 .section-list__item {
   display: inline-block;
