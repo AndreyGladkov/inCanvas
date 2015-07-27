@@ -8,6 +8,7 @@ var canvas = document.createElement('canvas'),
 	grayCanvas,
 	nodeSectionBaseCanvas = document.getElementById('base-canvas'),
 	nodeSectionEditCanvas = document.getElementById('edit-canvas'),
+	nodeSectionEditSeptiaCanvas = document.getElementById('edit-canvas-septia'),
 	pixelCount = canvas.width*canvas.height,
 	img = new Image();
 
@@ -21,6 +22,7 @@ img.onload = function(){
 	grayCanvas = entityCanvas.filter('white-black');
 	nodeSectionBaseCanvas.appendChild(entityCanvas.getCanvas());
 	nodeSectionEditCanvas.appendChild(grayCanvas);
+	nodeSectionEditSeptiaCanvas.appendChild(entityCanvas.filter('septia'));
 };
 
 
