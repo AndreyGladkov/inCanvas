@@ -18,7 +18,7 @@ img.onload = function(){
 	ctx.drawImage(img, 0, 0);
 	entityCanvas = new InCanvas(canvas); // Перезапишем сущность после загрузки изображения
 	nodeSectionBaseCanvas.appendChild(entityCanvas.getCanvas());
-	nodeSectionEditCanvas.appendChild(entityCanvas.filterGray());
+	nodeSectionEditCanvas.appendChild(entityCanvas.filter('white-black'));
 };
 
 describe("inCanvas init", function(){
