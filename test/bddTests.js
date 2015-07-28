@@ -9,6 +9,7 @@ var canvas = document.createElement('canvas'),
 	nodeSectionBaseCanvas = document.getElementById('base-canvas'),
 	nodeSectionEditCanvas = document.getElementById('edit-canvas'),
 	nodeSectionEditSeptiaCanvas = document.getElementById('edit-canvas-septia'),
+	nodeSectionEditBlurCanvas = document.getElementById('edit-canvas-blur'),
 	pixelCount = canvas.width*canvas.height,
 	img = new Image();
 
@@ -23,6 +24,7 @@ img.onload = function(){
 	nodeSectionBaseCanvas.appendChild(entityCanvas.getCanvas());
 	nodeSectionEditCanvas.appendChild(grayCanvas);
 	nodeSectionEditSeptiaCanvas.appendChild(entityCanvas.filter('septia'));
+	nodeSectionEditBlurCanvas.appendChild(entityCanvas.filter('blur-8bit'));
 };
 
 
